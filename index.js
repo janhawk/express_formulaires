@@ -24,7 +24,7 @@ app.post('/send-form',(req, res) => {
     console.log('POST /send-form');
     console.log('POST /send-form req.body', req.body);
 
-    res.send('ok');
+    res.send(`Welcome ${req.body.username} from ${req.body.city}! Your message has been recorded: ${req.body.description}`);
 });
 
 app.listen(port, () => {
